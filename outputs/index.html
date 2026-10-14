@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f7f6f2">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#fff2e7">
 <title>MEMORY STONE — 石ころに、旅の記憶を吹き込む。</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@400;500;600&display=swap');
@@ -38,6 +38,37 @@
 /* Per-photo travel notes */
 .travel-photo-card{width:100%;flex:none;padding:12px;border:1px solid #e8e6df;border-radius:10px;background:#fffefa}.travel-photo-heading{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#596253;font-size:11px}.travel-photo-heading img{width:66px;height:58px;border-radius:7px;object-fit:cover;background:#e8e5dc}.travel-photo-card .field{margin-bottom:10px}.travel-photo-card .field:last-child{margin-bottom:0}.travel-photo-card textarea{min-height:66px}.memory-photo-entry{min-width:0;margin:0}.memory-photo-entry figcaption{padding:8px 2px 0}.memory-photo-entry figcaption strong{font-size:10px;font-weight:500;color:#555e52;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.memory-photo-entry figcaption p{font-size:10px;color:#85877e;line-height:1.6;margin:3px 0 0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.lightbox-content{grid-template-rows:minmax(0,1fr) auto auto}.lightbox-caption{display:grid;gap:4px;max-width:min(85vw,800px);margin-top:34px;color:#fff;text-align:center}.lightbox-caption strong{font-size:12px;font-weight:500}.lightbox-caption span{font-size:11px;line-height:1.7;color:#ffffffc9}
 @media(max-width:600px){.travel-photo-heading img{width:58px;height:52px}.travel-photo-card{padding:10px}.memory-photo-entry figcaption strong,.memory-photo-entry figcaption p{font-size:9px}.lightbox-caption{margin-top:29px}}
+
+/* MEMORY STONE board-inspired visual direction */
+:root{--paper:#fff2e7;--white:#fffaf5;--ink:#594f4b;--muted:#887a74;--line:#eadbd0;--sage:#8f786d;--sage2:#f2e4d9;--sand:#f6e8dc;--shadow:0 12px 28px #59463b12}
+body{background:var(--paper);color:var(--ink);font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif}
+.shell{background:var(--paper)}
+.sidebar{background:#fff6ee;border-color:#eadbd0}
+.brand{padding-bottom:35px}.brand-logo{width:148px}
+.nav-label,.crumb{color:#9b8980}.nav button{color:#756660;border-radius:7px}.nav button.active,.nav button:hover{background:#f1e1d5;color:#67544b}
+.side-bottom{color:#98877f}.side-bottom .dot{background:#bf9a81}
+.icon-btn{background:#fffaf5;border-color:#e7d7cb;color:#816c60}
+.main{max-width:1600px}
+.hero{border-radius:7px;min-height:300px;padding:34px clamp(22px,4vw,52px);margin-bottom:34px;background:#a98d78 url('./home-hero.jpg') center 48%/cover no-repeat;box-shadow:0 10px 26px #59463b16}
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#30241d99 0%,#382a2270 40%,#382a2222 78%,transparent 100%);z-index:0}
+.hero:after{display:none}.hero-copy{max-width:610px}.hero .eyebrow{color:#fff4e8}.hero h1{font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif;font-weight:400;font-size:clamp(32px,4vw,48px);letter-spacing:.08em;line-height:1.42;color:#fffaf5;text-shadow:0 2px 16px #21181055}.hero p{color:#fff8ef;font-size:13px;line-height:1.9;text-shadow:0 1px 8px #21181066}
+.hero-actions .btn{border-radius:5px;background:#fff7ee;color:#66554b;border:1px solid #fff9f2;font-weight:500;box-shadow:0 4px 14px #30221925}.hero-actions .btn.secondary{background:#5d4d43c7;border-color:#fff8ee88;color:#fffaf5}
+.btn{border-radius:5px;background:#8b7061;box-shadow:0 3px 9px #55423616}.btn:hover{background:#735b4f}.btn.secondary{background:#fffaf5;color:#725d51;border-color:#e3d1c4}.btn.ghost{color:#786a62;border-color:#e2d1c5}.btn.danger{background:#f5e2dc;color:#9d6154;box-shadow:none}
+.eyebrow{color:#9b7965}.section-head h2,.page-heading h1{font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif;color:#5d514b;letter-spacing:.04em}
+.section-head p,.page-heading p{color:#8e8078}
+.cards{gap:16px}.stone-card{border-color:#eadbd0;border-radius:8px;background:#fffaf5;box-shadow:0 4px 15px #604d3d12}.stone-card:hover{box-shadow:0 10px 24px #604d3d1b}.card-photo{background:#e8d6c6}.card-info{padding:15px 16px 17px}.card-title h3{color:#554942;font-family:'Zen Maru Gothic','Noto Sans JP',sans-serif;font-weight:500}.card-date,.card-footer{color:#8a7b73}.card-footer{border-color:#f0e4db}.sample-label{color:#735f54;background:#fff8f0e8}
+.guide{background:#dff1f4;border:1px solid #d3e9ed;border-radius:7px;color:#6d7777}.guide b{color:#596e72}.guide .guideicon{color:#718b8e}
+.empty,.memory-gallery-empty{border-color:#ddcabc;background:#fff8f1;color:#89786f}.empty h3{color:#5d514b}.empty .stone-icon,.memory-placeholder-icon{color:#b5967f}
+.camera-card,.panel,.form-panel,.memory-error{background:#fffaf5;border-color:#eadbd0;border-radius:8px;box-shadow:0 5px 16px #59463b0b}.camera-view{background:#ecdccc;border-radius:7px}.camera-placeholder{color:#806f65}.camera-placeholder .cam-big{border-color:#cdb6a5}.camera-placeholder svg{stroke:#8a7161}.scan-frame{border-radius:8px}
+.pick-item{background:#fffdf9;border-color:#ecded4;border-radius:7px}.pick-item:hover{border-color:#c7a58d;background:#fff5ec}.pick-thumb{border-radius:5px}
+.form-panel h3,.memory-stone-card strong{color:#5c504a}.field label,.memory-stone-label{color:#82736c}.field input,.field textarea,.field select{background:#fffdf9;border-color:#e7d8ce;color:#584d47;border-radius:5px}.field input:focus,.field textarea:focus,.field select:focus{border-color:#b59279;box-shadow:0 0 0 3px #b592791f}
+.upload{border-color:#d8c3b3;background:#fff7ef;color:#806e63;border-radius:6px}.upload:hover{border-color:#b8957d;background:#fdf0e5}.upload svg{stroke:#9a7a65}.travel-photo-card{border-color:#eadbd0;background:#fffdf9}.travel-photo-heading{color:#826a5c}
+.memory-main-block{border-radius:7px;background:#f1e1d4}.memory-summary{color:#5a4c45}.memory-place-block h1{color:#5b4d46}.memory-stone-card{border-color:#eadbd0;background:#fffaf5;border-radius:7px}.memory-stone-photo,.memory-stone-placeholder{border-radius:5px;background:#f0e4da}.memory-photo-button{border-radius:6px;background:#f0e4da}.memory-photo-zoom{color:#70584a;background:#fff8f0ed}.memory-note{background:#e2f1f2;border-color:#d4e8e8;border-radius:7px}.memory-note h2{color:#5c6d6d}.memory-note p{color:#6d7777}.memory-error{border-radius:7px}
+.lightbox{background:#312a26ed}.lightbox-nav{background:#fff6ee24!important}.lightbox-close{background:#fff6ee2b!important}
+.shop-intro h1{color:#594c45}.shop-panel{border-color:#e7d7ca;border-radius:8px;background:#fffaf5;box-shadow:0 8px 24px #59463b10}.shop-panel h2{color:#594a42}.shop-description,.shop-features{color:#776960}.shop-price-note{background:#f2e4d8;color:#786352}.shop-submit{background:#826959}.shop-submit:hover{background:#6e584b}.shop-result{background:#e4f0eb;color:#5c7163}
+.mobile-nav{background:#fff8f2;border-color:#e9d9ce}.mobile-nav button{color:#8a7970}.mobile-nav button.active{color:#715b4e}
+@media(max-width:800px){.hero{min-height:320px;padding:26px 22px;background-position:56% center}.hero:before{background:linear-gradient(90deg,#30241d9c 0%,#382a226e 62%,#382a2228 100%)}.hero-copy{max-width:100%}.hero h1{font-size:clamp(28px,8vw,38px)}.main{padding-top:17px}}
+@media(max-width:600px){.hero{min-height:345px;margin-bottom:29px;border-radius:6px;background-position:55% center}.hero-actions .btn{padding:10px 12px}.section-head h2{font-size:20px}.guide{padding:14px 15px}.form-panel{padding:16px}.page-heading h1{font-size:29px}}
 </style>
 </head>
 <body><div class="shell">
